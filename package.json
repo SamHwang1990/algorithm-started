@@ -1,0 +1,31 @@
+{
+  "name": "algorithm-started",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha -r espower-typescript/guess -r tsconfig-paths/register \"tests/**/*.ts\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamHwang1990/algorithm-started.git"
+  },
+  "author": "samhwang1990@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SamHwang1990/algorithm-started/issues"
+  },
+  "homepage": "https://github.com/SamHwang1990/algorithm-started#readme",
+  "devDependencies": {
+    "@types/mocha": "^5.2.4",
+    "@types/node": "^10.5.1",
+    "espower-typescript": "^9.0.0",
+    "mocha": "^5.2.0",
+    "power-assert": "^1.6.0",
+    "tsconfig-paths": "^3.4.2",
+    "typescript": "^2.9.2"
+  }
+}
