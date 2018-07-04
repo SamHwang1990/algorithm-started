@@ -13,6 +13,29 @@
 - `$ ./node_modules/.bin/mocha --require espower-typescript/guess "tests/**/*.ts"`
 - `npm run test`
 
+## WebStorm 调试配置：
+
+### 类别：
+
+Node.js
+
+### Node Parameters:
+
+ `./node_modules/.bin/mocha --inspect -r espower-typescript/guess -r tsconfig-paths/register`
+
+### Javascript File:
+
+指定要调试的test 文件即可
+
+### 开启Typescript sourcemap:
+
+```js
+{
+    "compilerOptions": {
+        "sourceMap": true,
+    }
+}
+```
 
 ## 参考文章：
 - [单元测试](https://eggjs.org/zh-cn/core/unittest.html)
