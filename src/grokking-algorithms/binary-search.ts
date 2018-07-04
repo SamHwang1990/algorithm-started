@@ -3,6 +3,9 @@
  */
 
 export default function binarySearch(sortedArray: number[], targetNumber: number): number {
+    if (!Array.isArray(sortedArray)) return -1;
+    if (targetNumber !== targetNumber) return -1;
+
     let searchStart = 0;
     let searchEnd = sortedArray.length - 1;
 
