@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "mocha -r espower-typescript/guess -r tsconfig-paths/register \"tests/**/*.ts\""
+    "test": "node $NODE_DEBUG_OPTION ./node_modules/.bin/mocha -r espower-typescript/guess -r tsconfig-paths/register \"tests/**/*.ts\""
   },
   "repository": {
     "type": "git",

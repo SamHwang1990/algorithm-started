@@ -13,7 +13,7 @@ export default function binarySearch(sortedArray: number[], targetNumber: number
             return sortedArray[searchStart] === targetNumber ? searchStart : -1;
         }
 
-        let middleIndex = searchStart + (searchEnd - searchStart) / 2;
+        let middleIndex = searchStart + Math.floor((searchEnd - searchStart) / 2);
         let middleNumber = sortedArray[middleIndex];
 
         let difference = targetNumber - middleNumber;
