@@ -3,8 +3,14 @@
         "module": "commonjs",
         "target": "es5",
         "sourceMap": true,
-
+        "downlevelIteration": true,
         "baseUrl": ".",
+
+        "lib": [
+            "ES6",
+            "ES5"
+        ],
+
         "paths": {
             "src/*": ["./src/*"]
         }

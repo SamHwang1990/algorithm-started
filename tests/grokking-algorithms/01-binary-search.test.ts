@@ -2,7 +2,7 @@
  * Created by samhwang1990@gmail.com.
  */
 
-import binarySearch from 'src/grokking-algorithms/binary-search';
+import binarySearch from 'src/grokking-algorithms/01-binary-search';
 
 import 'mocha';
 

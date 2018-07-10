@@ -2,7 +2,7 @@
  * Created by samhwang1990@gmail.com.
  */
 
-import selectionAscSort from 'src/grokking-algorithms/selection-sort';
+import selectionAscSort from 'src/grokking-algorithms/02-selection-sort';
 import assert = require('assert');
 
 import 'mocha';
