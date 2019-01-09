@@ -11,7 +11,7 @@ import assert = require('assert');
 
 describe('Insertion Sort vs Selection Sort', () => {
     it('random array', function () {
-        let srcArr = randomIntArray(10000);
+        let srcArr = randomIntArray(100000);
 
         let selectionArr = Array.from(srcArr);
         let insertionArr = Array.from(srcArr);
@@ -30,7 +30,7 @@ describe('Insertion Sort vs Selection Sort', () => {
 
     it('partial random array', function () {
         let srcArr = fillAscArray(10000);
-        arrayPartialRandom(srcArr, 0.09);
+        arrayPartialRandom(srcArr, 0.2);
 
         let selectionArr = Array.from(srcArr);
         let insertionArr = Array.from(srcArr);
