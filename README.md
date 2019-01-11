@@ -21,7 +21,7 @@ Node.js
 
 ### Node Parameters:
 
- `./node_modules/.bin/mocha --inspect -r espower-typescript/guess -r tsconfig-paths/register`
+ `./node_modules/.bin/mocha --timeout 100000 -r espower-typescript/guess -r tsconfig-paths/register`
 
 ### Javascript File:
 
