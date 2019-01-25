@@ -73,3 +73,34 @@ export function timeRecord(handler): any {
 
     return result;
 }
+
+export function arrayToList(arr: any[]) {
+    let helper = {
+        val: null,
+        next: null,
+    };
+
+    for (let i = arr.length - 1; i >= 0; --i) {
+        let node = {
+            val: arr[i],
+            next: helper.next,
+        };
+
+        helper.next = node;
+    }
+
+    return helper.next;
+}
+
+export function listToArray(head): any[] {
+    let arr = [];
+
+    let node = head;
+
+    while(node != null) {
+        arr.push(node.val);
+        node = node.next;
+    }
+
+    return arr;
+}
