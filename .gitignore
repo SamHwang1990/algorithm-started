@@ -1,3 +1,4 @@
 .idea/
 node_modules/
+tests/algorithms/03-searching/data/
 package-lock.json
