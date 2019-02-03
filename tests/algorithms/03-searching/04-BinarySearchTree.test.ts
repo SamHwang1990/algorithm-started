@@ -3,10 +3,17 @@
  */
 
 import { BinarySearchTree } from 'src/algorithms/03-searching/03-BinarySearchTree';
-import { numberComparator } from './helpers/KeyComparator';
+import {numberComparator, stringComparator} from './helpers/KeyComparator';
 
 import 'mocha';
 import assert = require('assert');
+import {
+    Leipzig100kCounter,
+    Leipzig1mCounter,
+    Leipzig300kCounter,
+    TaleCounter,
+    TnyTaleCounter
+} from "./helpers/FrequencyCounter";
 
 describe('Symbol Table Api Testing', () => {
     it('basic test', function () {
@@ -42,5 +49,23 @@ describe('Symbol Table Api Testing', () => {
         st.deleteMin();
         assert(st.size() === 8);
         assert(st.select(1) === 4);
+    });
+});
+
+describe('Binary Search Ordered Symbol Table Test Suite', () => {
+    it('TnyTaleCounter test', async function () {
+        await TnyTaleCounter.exec(new BinarySearchTree(stringComparator), 1);
+    });
+    it('TaleCounter test', async function () {
+        await TaleCounter.exec(new BinarySearchTree(stringComparator), 8);
+    });
+    it('Leipzig100kCounter test', async function () {
+        await Leipzig100kCounter.exec(new BinarySearchTree(stringComparator), 10);
+    });
+    it('Leipzig300kCounter test', async function () {
+        await Leipzig300kCounter.exec(new BinarySearchTree(stringComparator), 10);
+    });
+    it('Leipzig1mCounter test', async function () {
+        await Leipzig1mCounter.exec(new BinarySearchTree(stringComparator), 10);
     });
 });
