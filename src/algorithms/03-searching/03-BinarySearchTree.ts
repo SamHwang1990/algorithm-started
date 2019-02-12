@@ -162,7 +162,7 @@ export class BinarySearchTree<K = any, V = any> extends OrderedSymbolTable {
         if (x == null) return x;
         if (x.right == null) return x.left;
 
-        x.right = this.deleteMinUnderNode(x.right);
+        x.right = this.deleteMaxUnderNode(x.right);
         x.size = this.calSizeOfNode(x);
         return x;
     }
@@ -174,7 +174,7 @@ export class BinarySearchTree<K = any, V = any> extends OrderedSymbolTable {
     private deleteUnderNode(x: Node, key: K): Node {
         if (x == null) return x;
 
-        let compare = this.keyComparator(x.key, key);
+        let compare = this.keyComparator(key, x.key);
 
         if (compare > 0) x.right = this.deleteUnderNode(x.right, key);
         else if (compare < 0) x.left = this.deleteUnderNode(x.left, key);
@@ -192,7 +192,7 @@ export class BinarySearchTree<K = any, V = any> extends OrderedSymbolTable {
     }
 
     isEmpty(): boolean {
-        return !!this.root;
+        return !this.root;
     }
 
     contains(key: K): boolean {
