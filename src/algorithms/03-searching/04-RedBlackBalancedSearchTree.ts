@@ -1,5 +1,9 @@
 /**
  * Created by zhiyuan.huang@ddder.net.
+ *
+ * 代码参考：https://algs4.cs.princeton.edu/33balanced/RedBlackBST.java.html
+ *
+ * 删除算法中，比较好的解析：[RBT(红黑树)的删除算法](https://blog.csdn.net/xiaoguobaf/article/details/52104857)
  */
 
 import { OrderedSymbolTable } from './SymbolTable';
